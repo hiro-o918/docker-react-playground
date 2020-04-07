@@ -15,8 +15,18 @@ dev/run:
 		-it \
 		-p 3000:3000 \
 		-v /app/node_modules \
-		-v /app:$(PWD)
+		-v $(PWD):/app
 		hiro918/dev-$(IMAGE_NAME):$(VTAG)
+
+.PHONY: dev/test
+dev/test:
+	docker run \
+		-e CI=true \
+		-it \
+		-v /app/node_modules \
+		-v $(PWD):/app \
+		hiro918/dev-$(IMAGE_NAME):$(VTAG) \
+		yarn run test 
 
 .PHONY: build
 build:
