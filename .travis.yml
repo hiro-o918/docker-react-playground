@@ -8,6 +8,7 @@ script:
   - make dev/test
 deploy:
   provider: elasticbeanstalk
+  edge: true
   region: "us-east2"
   app: "hironori-udemy-docker-react-playground"
   env: "HironoriUdemyDockerReactPlayground-env-3"
