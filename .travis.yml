@@ -9,11 +9,11 @@ script:
 deploy:
   provider: elasticbeanstalk
   edge: true
-  region: "us-east2"
+  region: "us-east-2"
   app: "hironori-udemy-docker-react-playground"
   env: "HironoriUdemyDockerReactPlayground-env-3"
   bucket_name: "elasticbeanstalk-us-east-2-085107194442"
-  bucket_path: "hironori-udemy-docker-react-playground"
+  bucket_path: "hironori-docker-react-playground"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
