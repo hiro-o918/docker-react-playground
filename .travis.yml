@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - make dev/build
+
+script:
+  - make dev/test
